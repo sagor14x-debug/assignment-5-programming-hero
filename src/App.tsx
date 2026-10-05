@@ -1,4 +1,6 @@
-import Logo from "./assets/logo-text.png"
+import Bannar from "./Components/Bannar"
+import Card from "./Components/Card"
+import Nav from "./Components/Nav"
 
 
 function App() {
@@ -6,17 +8,9 @@ function App() {
 
   return (
     <>
-   <nav className="flex justify-between">
-    <img src={Logo} alt="" />
-
-    <ul className="flex gap-4 items-center">
-      <li>Home</li>
-      <li>Technologies</li>
-      <li>Projects</li>
-      <li>About</li>
-      <li>Contact</li>
-    </ul>
-   </nav>
+    <Nav />
+    <Bannar />
+    <Card />
     </>
   )
 }
