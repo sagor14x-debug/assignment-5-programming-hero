@@ -6,10 +6,15 @@ const Bannar = () => {
 
   {/* Left Side */}
   <div className="flex-1">
-    <h2 className="text-7xl font-bold mb-6">
-      Build Your Ideal <br />
-      Development Stack
-    </h2>
+<h2 className="mb-6 text-7xl font-bold">
+  <span className="text-black">
+    Build Your Ideal <br />
+  </span>
+
+  <span className="bg-gradient-to-r from-red-500 via-fuchsia-600 to-purple-700 bg-clip-text text-transparent">
+    Development Stack
+  </span>
+</h2>
 
     <p className="text-lg leading-7">
       Explore frontend, backend, database, and tooling options, <br />
