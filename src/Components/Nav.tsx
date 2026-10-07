@@ -1,50 +1,221 @@
+// import Logo from "../assets/logo-text.png";
+
+// const Nav = () => {
+//   return (
+//     <nav className="container mx-auto mt-6 px-6 py-3 flex items-center justify-between">
+
+//       {/* Logo */}
+//       <img
+//         src={Logo}
+//         alt="Logo"
+//         className="w-36"
+//       />
+
+//       {/* Navigation */}
+//       <ul className="hidden md:flex items-center gap-8 font-medium text-gray-700">
+//         <li className="text-pink-600 cursor-pointer">
+//           Home
+//         </li>
+
+//         <li className="cursor-pointer hover:text-pink-600 transition">
+//           Technologies
+//         </li>
+
+//         <li className="cursor-pointer hover:text-pink-600 transition">
+//           Projects
+//         </li>
+
+//         <li className="cursor-pointer hover:text-pink-600 transition">
+//           About
+//         </li>
+
+//         <li className="cursor-pointer hover:text-pink-600 transition">
+//           Contact
+//         </li>
+//       </ul>
+
+//       {/* Buttons */}
+//       <div className="flex items-center gap-3">
+//         <button className="px-4 py-2 font-medium text-gray-700 rounded-xl hover:bg-gray-100 cursor-pointer transition">
+//           Sign In
+//         </button>
+
+//         <button className="px-5 py-2 rounded-xl text-white bg-pink-600 hover:bg-pink-700 cursor-pointer transition">
+//           Sign Up
+//         </button>
+//       </div>
+
+//     </nav>
+//   );
+// };
+
+// export default Nav;
+
+
+
+
+
+
+
+
+
+
+
+
 import Logo from "../assets/logo-text.png";
+import { FiMenu } from "react-icons/fi";
 
 const Nav = () => {
   return (
-    <nav className="container mx-auto mt-6 px-6 py-3 flex items-center justify-between">
+    <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm">
+      <div className="container mx-auto px-4 md:px-6 py-4">
 
-      {/* Logo */}
-      <img
-        src={Logo}
-        alt="Logo"
-        className="w-36"
-      />
+        {/* ================= Desktop Navbar ================= */}
+        <div className="hidden md:flex items-center justify-between">
 
-      {/* Navigation */}
-      <ul className="hidden md:flex items-center gap-8 font-medium text-gray-700">
-        <li className="text-pink-600 cursor-pointer">
-          Home
-        </li>
+          {/* Logo */}
+          <a href="#">
+            <img
+              src={Logo}
+              alt="Dev Stack"
+              className="w-32 lg:w-36"
+            />
+          </a>
 
-        <li className="cursor-pointer hover:text-pink-600 transition">
-          Technologies
-        </li>
+          {/* Navigation */}
+          <ul className="flex items-center gap-6 lg:gap-8 font-medium text-gray-700">
+            <li>
+              <a
+                href="#"
+                className="text-pink-600 transition"
+              >
+                Home
+              </a>
+            </li>
 
-        <li className="cursor-pointer hover:text-pink-600 transition">
-          Projects
-        </li>
+            <li>
+              <a
+                href="#technologies"
+                className="hover:text-pink-600 transition"
+              >
+                Technologies
+              </a>
+            </li>
 
-        <li className="cursor-pointer hover:text-pink-600 transition">
-          About
-        </li>
+            <li>
+              <a
+                href="#projects"
+                className="hover:text-pink-600 transition"
+              >
+                Projects
+              </a>
+            </li>
 
-        <li className="cursor-pointer hover:text-pink-600 transition">
-          Contact
-        </li>
-      </ul>
+            <li>
+              <a
+                href="#about"
+                className="hover:text-pink-600 transition"
+              >
+                About
+              </a>
+            </li>
 
-      {/* Buttons */}
-      <div className="flex items-center gap-3">
-        <button className="px-4 py-2 font-medium text-gray-700 rounded-xl hover:bg-gray-100 cursor-pointer transition">
-          Sign In
-        </button>
+            <li>
+              <a
+                href="#contact"
+                className="hover:text-pink-600 transition"
+              >
+                Contact
+              </a>
+            </li>
+          </ul>
 
-        <button className="px-5 py-2 rounded-xl text-white bg-pink-600 hover:bg-pink-700 cursor-pointer transition">
-          Sign Up
-        </button>
+          {/* Buttons */}
+          <div className="flex items-center gap-2">
+
+            {/* Sign In */}
+            <button
+              className="px-4 py-2 font-medium text-gray-700
+              rounded-xl hover:bg-gray-100
+              transition cursor-pointer"
+            >
+              Sign In
+            </button>
+
+            {/* Sign Up */}
+            <button
+              className="px-5 py-2 rounded-xl
+              text-white font-medium
+              bg-pink-700 hover:bg-pink-800
+              transition cursor-pointer"
+            >
+              Sign Up
+            </button>
+
+          </div>
+        </div>
+
+
+        {/* ================= Mobile Navbar ================= */}
+        <div className="relative flex md:hidden items-center justify-between">
+
+          {/* Hamburger */}
+          <button
+            className="flex items-center justify-center
+            w-9 h-9 rounded-lg
+            hover:bg-gray-100
+            transition cursor-pointer"
+            aria-label="Open menu"
+          >
+            <FiMenu className="text-2xl text-gray-800" />
+          </button>
+
+
+          {/* Center Logo */}
+          <a
+            href="#"
+            className="absolute left-1/2 -translate-x-1/2"
+          >
+            <img
+              src={Logo}
+              alt="Dev Stack"
+              className="w-28"
+            />
+          </a>
+
+
+          {/* Mobile Buttons */}
+          <div className="flex items-center gap-1">
+
+            {/* Sign In */}
+            <button
+              className="px-2 py-1.5
+              text-xs font-medium
+              text-gray-700
+              rounded-lg
+              hover:bg-gray-100
+              transition cursor-pointer"
+            >
+              Sign In
+            </button>
+
+            {/* Sign Up */}
+            <button
+              className="px-3 py-1.5
+              text-xs font-medium
+              text-white
+              rounded-lg
+              bg-pink-700 hover:bg-pink-800
+              transition cursor-pointer"
+            >
+              Sign Up
+            </button>
+
+          </div>
+
+        </div>
+
       </div>
-
     </nav>
   );
 };
