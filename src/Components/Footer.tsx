@@ -3,21 +3,21 @@ import Logo from "../assets/logo-text.png";
 const Footer = () => {
   return (
     <footer className="border-t border-gray-100 bg-white">
-      <div className="container mx-auto px-5 md:px-10">
+      <div className="container mx-auto px-5 md:px-7">
 
-        {/* ================= MOBILE FOOTER ================= */}
+           {/* DESKTOP FOOTER */}
         <div className="block md:hidden">
 
           {/* Brand */}
-          <div className="flex flex-col items-center pt-[92px] pb-[72px]">
+          <div className="flex flex-col items-center pt-23 pb-18">
 
             <img
               src={Logo}
               alt="Dev Stack"
-              className="w-[338px] max-w-full"
+              className="w-84.5 max-w-full"
             />
 
-            <p className="mt-8 max-w-[900px] text-center text-[20px] leading-8 text-gray-500">
+            <p className="mt-8 max-w-225 text-center text-[20px] leading-8 text-gray-500">
               Curated tools, technologies, and resources for developers
               <br />
               building modern software.
@@ -85,11 +85,11 @@ const Footer = () => {
         </div>
 
 
-        {/* ================= DESKTOP FOOTER ================= */}
+         {/* DESKTOP FOOTER */}
         <div className="hidden md:block">
 
           {/* Main Footer */}
-          <div className="pt-[92px] pb-[48px]">
+          <div className="pt-23 pb-12">
 
             <div className="grid grid-cols-5 gap-8">
 
@@ -286,8 +286,7 @@ const Footer = () => {
           </div>
 
 
-          {/* Exact 48px bottom spacing */}
-          <div className="h-[48px]" />
+          <div className="h-12" />
 
         </div>
 
